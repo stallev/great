@@ -9,66 +9,165 @@
 </head>
 <body>
   <header class="header">
-    <div class="container container--header">
-      <div class="header__upper">
-        <div class="header__logo-toggle">
-            <div class="logo logo--header">
-              <picture class="logo__image logo__image--header">
-                <source media="(min-width: 768px)" srcset="img/decor/logo-tablet.png">
-                <source media="(min-width: 1360px)" srcset="img/decor/logo-desktop.png">
-                <img src="img/decor/logo.png" alt="logo">
-              </picture>
-            </div>
-            <div class="header__toggle">
-              <button class="header__toggle-button header__toggle-button--cross"></button>
-              <button class="header__toggle-button header__toggle-button--hamburger"></button>
-            </div>
-
-          </div>
-        <nav class="nav nav--header">
-          <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">главная</a></li>
-            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">преимущества</a></li>
-            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">портфолио</a></li>
-            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">наши услуги</a></li>
-            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">отзывы</a></li>
-            <li class="nav__item"><a class="nav__link nav__link--header-nav" href="#">контакты</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__bottom">
-        <div class="page-title">
-            <h1 class="page-title__title">
-              Дизайн интерьеров
-            </h1>
-            <p class="page-title__description">
-              Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
-            </p>
-          </div>
-          <a href="#" class="header__bottom-menu-link">
-            ЗАКАЗАТЬ ДИЗАЙН
-          </a>
+    <div class="header__upper">
+      <div class="container container--header-upper">
+        <div class="logo">
+          <img src="../img/decor/logo.png" alt="logo" class="logo__image">
         </div>
+        <div class="header__contacts">
+          <a href="tel:+74997777777" class="header__contacts-link">+7(499) 777-77-77</a>
+          <a href="tel:+74997777777" class="header__contacts-link">+7(499) 777-77-77</a>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container container--header--bottom">
+        <form action="post" action="http://localhost:3000" class="contact-form" name="contacts">
+          <h3 class="part-title part-title--fiolet">форма с кнопкой</h3>
+          <fieldset class="contact-form__fieldset">
+            <div class="contact-form__input-wrapper">
+              <p class="contact-form__message"></p>
+              <input type="text">
+              <input type="submit" name="submit-info" value="получить">
+            </div>
+          </fieldset>
+        </form>
       </div>
     </div>
   </header>
   <main class="main">
+    <section class="slider">
+      <div class="container">
+        <h3 class="part-title part-title part-title--fiolet">
+        тут у нас слайдер
+        </h3>
+        <div class="slider-content">
+          <div class="slider__item"><span class="slider__item-content">1</span></div>
+          <div class="slider__item"><span class="slider__item-content">2</span></div>
+          <div class="slider__item"><span class="slider__item-content">3</span></div>
+        </div>
+        <div class="slider__controls">
+          <div class="slider__control"></div>
+          <div class="slider__control"></div>
+          <div class="slider__control"></div>
+        </div>
+      </div>
+    </section>
+    <div class="text-block">
+      <h3 class="part-title part-title--black">
+        просто текстовый блок
+      </h3>
+      <div class="text-block__content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere quis arcu sit amet commodo. Nullam ac dui lacus. Nulla dapibus interdum interdum. Curabitur ut diam nisl. Vivamus libero lacus, viverra at dolor sit amet, commodo faucibus orci. Vivamus laoreet ornare nisi, id pharetra tellus ullamcorper volutpat. Sed lacinia placerat accumsan. Praesent pharetra ipsum scelerisque, sodales urna ut, placerat nulla. Duis nunc urna, semper non arcu ut, sagittis dapibus lorem. Nunc nec urna id velit sodales sodales. Sed porttitor quam eget mollis consequat. Curabitur aliquet nec dui eget aliquet. Nulla in risus ante.
+      </div>
+    </div>
+    <section class="calculator">
+      <div class="container">
+        <h3 class="part-title part-title--fiolet">
+          Калькулятор</br>(стоимость пользователь узнает по телефону)
+        </h3>
+        <ul class="calculator__product-list">
+          <li class="calculator__product-item">
+            <img src="../img/content/1w.jpg" alt="Одностворчатое" class="calculator__product-item-image">
+            <h4 class="calculator__product-item-title">Одностворчатое</h4>
+          </li>
+          <li class="calculator__product-item">
+            <img src="../img/content/2w.jpg" alt="Двухстворчатое" class="calculator__product-item-image">
+            <h4 class="calculator__product-item-title">Двухстворчатое</h4>
+          </li>
+          <li class="calculator__product-item">
+            <img src="../img/content/3w.jpg" alt="Трехстворчатое" class="calculator__product-item-image">
+            <h4 class="calculator__product-item-title">Трехстворчатое</h4>
+          </li>
+          <li class="calculator__product-item">
+            <img src="../img/content/3w-b.jpg" alt="Балконный блок" class="calculator__product-item-image">
+            <h4 class="calculator__product-item-title">Балконный блок</h4>
+          </li>
+          <li class="calculator__product-item">
+            <img src="../img/content/b.jpg" alt="Остекление балкона" class="calculator__product-item-image">
+            <h4 class="calculator__product-item-title">Остекление балкона</h4>
+          </li>
+        </ul>
+        <form class="calculator-form" action="index.html" method="post" name="price-calculator">
+          <div class="calculator-form__wrapper">
+            <div class="calculator-form__sources">
+              <div class="calculator-form__variant-size">
+                <div class="calculator-form__variant-size-image">
+                  <div class="calculator-form__variant-units">
+                    <span class="calculator-form__variant-unit">ширина</span>
+                    <span class="calculator-form__variant-unit">высота</span>
+                  </div>
+                  <img src="../img/content/1w.jpg" alt="Одностворчатое" class="calculator-form__variant-image">
+                </div>
+                <fieldset class="calculator-form__variant-count-block">
+                  <div class="calculator-form__variant-count-block-wrapper">
+                    <div class="calculator-form__variant-count-block-unit">
+                      <span class="calculator-form__variant-count-block-unit-name">
+                        ширина, см
+                      </span>
+                      <input type="number" name="variant-width" class="calculator-form__variant-count-block-value">
+                    </div>
+                    <!--<img src="../img/decor/multiply.png" alt="multiply" class="calculator-form__multiply">-->
+                    <div class="calculator-form__variant-count-block-unit">
+                      <span class="calculator-form__variant-count-block-unit-name">
+                        высота, см
+                      </span>
+                      <input type="number" name="variant-height" class="calculator-form__variant-count-block-value">
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <ul class="calculator-form__variants-list">
+                <li class="calculator-form__variant-parameters">
+                  <h4 class="calculator-form__variant-title">Одностворчатое окно</h4>
+                  <div class="calculator-form__variant-parameter">
+                    <h5 class="calculator-form__variant-parameter-title">
+                      1.Критерий выбора
+                    </h5>
+                    <ul class="calculator-form__variant-parameter-variants">
+                      <li class="calculator-form__variant-parameter-item">
+                        <label for="#variant1.1">пункт выбора 1</label>
+                        <input type="checkbox" name="variant1.1" id="#variant1.1">
+                      </li>
+                      <li class="calculator-form__variant-parameter-item">
+                        <label for="#variant1.2">пункт выбора 2</label>
+                        <input type="checkbox" name="variant1.1" id="#variant1.2">
+                      </li>
+                      <li class="calculator-form__variant-parameter-item">
+                        <label for="#variant1.3">пункт выбора 3</label>
+                        <input type="checkbox" name="variant1.1" id="#variant1.3">
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="calculator-form__variant-parameter">
+                    <h5 class="calculator-form__variant-parameter-title">
+                      2. Выберите открывание створки
+                    </h5>
+                    <div class="calculator-form__variant-parameter-variants">
+                      <select size="3" multiple name="opens">
+                        <option selected value="disable-open">Не открывается</option>
+                        <option value="full-open">Открывается</option>
+                        <option value="half-open">Открывается наполовину</option>
+                      </select><
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="calculator-form__submit-block">
+              <input type="text" placeholder="Введите номер" class="calculator-form__phone" name="customer-phone">
+              <input type="submit" value="рассчитать">
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container container--footer">
       <div class="footer__content">
-        <div class="logo logo--footer">
-          <img src="../img/decor/logo-footer.png" alt="logo" class="logo__image logo__image--footer">
-        </div>
-        <div class="footer__social">
-          <a href="#" class="footer__social-link footer__social-link--vk"></a>
-          <a href="#" class="footer__social-link footer__social-link--instagram"></a>
-          <a href="#" class="footer__social-link footer__social-link--facebook"></a>
-        </div>
-        <div class="footer__info">
-          <p class="footer__copyright">BRUME interior, 2017 &nbsp; &copy;</p>
-          <p class="footer__author-design">HolodnayaDesign</p>
-        </div>
+        <span class="footer__content-item">просто</span>
+        <span class="footer__content-item">скромный футер</span>
       </div>
     </div>
   </footer>
