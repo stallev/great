@@ -1,0 +1,10 @@
+.text-block{
+  margin-bottom: 50px;
+  &__content{
+    color: $black-content-color;
+    font-family: $content-ff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+  }
+}

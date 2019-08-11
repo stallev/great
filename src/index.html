@@ -26,9 +26,13 @@
           <h3 class="part-title part-title--fiolet">форма с кнопкой</h3>
           <fieldset class="contact-form__fieldset">
             <div class="contact-form__input-wrapper">
-              <p class="contact-form__message"></p>
-              <input type="text">
-              <input type="submit" name="submit-info" value="получить">
+              <p class="contact-form__message">
+                оставь телефон и получи что-то офигенное
+              </p>
+              <div class="contact-form__input-block">
+                <input type="text" placeholder="введите номер" class="contact-form__input-field">
+                <input type="submit" name="submit-info" value="получить" class="contact-form__submit-button">
+              </div>
             </div>
           </fieldset>
         </form>
@@ -37,39 +41,41 @@
   </header>
   <main class="main">
     <section class="slider">
-      <div class="container">
-        <h3 class="part-title part-title part-title--fiolet">
+      <div class="container container--slider">
+        <h3 class="part-title part-title--fiolet">
         тут у нас слайдер
         </h3>
-        <div class="slider-content">
-          <div class="slider__item"><span class="slider__item-content">1</span></div>
-          <div class="slider__item"><span class="slider__item-content">2</span></div>
-          <div class="slider__item"><span class="slider__item-content">3</span></div>
+        <div class="slider__content">
+          <div class="slider__item slider__item--1 slider__item--active"><span class="slider__item-content">1</span></div>
+          <div class="slider__item slider__item--2"><span class="slider__item-content">2</span></div>
+          <div class="slider__item slider__item--3"><span class="slider__item-content">3</span></div>
         </div>
         <div class="slider__controls">
-          <div class="slider__control"></div>
+          <div class="slider__control slider__control--active"></div>
           <div class="slider__control"></div>
           <div class="slider__control"></div>
         </div>
       </div>
     </section>
     <div class="text-block">
-      <h3 class="part-title part-title--black">
-        просто текстовый блок
-      </h3>
-      <div class="text-block__content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere quis arcu sit amet commodo. Nullam ac dui lacus. Nulla dapibus interdum interdum. Curabitur ut diam nisl. Vivamus libero lacus, viverra at dolor sit amet, commodo faucibus orci. Vivamus laoreet ornare nisi, id pharetra tellus ullamcorper volutpat. Sed lacinia placerat accumsan. Praesent pharetra ipsum scelerisque, sodales urna ut, placerat nulla. Duis nunc urna, semper non arcu ut, sagittis dapibus lorem. Nunc nec urna id velit sodales sodales. Sed porttitor quam eget mollis consequat. Curabitur aliquet nec dui eget aliquet. Nulla in risus ante.
+      <div class="container">
+        <h3 class="part-title part-title--black">
+          просто текстовый блок
+        </h3>
+        <div class="text-block__content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere quis arcu sit amet commodo. Nullam ac dui lacus. Nulla dapibus interdum interdum. Curabitur ut diam nisl. Vivamus libero lacus, viverra at dolor sit amet, commodo faucibus orci. Vivamus laoreet ornare nisi, id pharetra tellus ullamcorper volutpat. Sed lacinia placerat accumsan. Praesent pharetra ipsum scelerisque, sodales urna ut, placerat nulla. Duis nunc urna, semper non arcu ut, sagittis dapibus lorem. Nunc nec urna id velit sodales sodales. Sed porttitor quam eget mollis consequat. Curabitur aliquet nec dui eget aliquet. Nulla in risus ante.
+        </div>
       </div>
     </div>
     <section class="calculator">
-      <div class="container">
+      <div class="container container--calculator">
         <h3 class="part-title part-title--fiolet">
           Калькулятор</br>(стоимость пользователь узнает по телефону)
         </h3>
         <ul class="calculator__product-list">
           <li class="calculator__product-item">
             <img src="../img/content/1w.jpg" alt="Одностворчатое" class="calculator__product-item-image">
-            <h4 class="calculator__product-item-title">Одностворчатое</h4>
+            <h4 class="calculator__product-item-title calculator__product-item-title--active">Одностворчатое</h4>
           </li>
           <li class="calculator__product-item">
             <img src="../img/content/2w.jpg" alt="Двухстворчатое" class="calculator__product-item-image">
@@ -94,8 +100,8 @@
               <div class="calculator-form__variant-size">
                 <div class="calculator-form__variant-size-image">
                   <div class="calculator-form__variant-units">
-                    <span class="calculator-form__variant-unit">ширина</span>
-                    <span class="calculator-form__variant-unit">высота</span>
+                    <span class="calculator-form__variant-unit-width">ширина</span>
+                    <span class="calculator-form__variant-unit-height">высота</span>
                   </div>
                   <img src="../img/content/1w.jpg" alt="Одностворчатое" class="calculator-form__variant-image">
                 </div>
@@ -105,7 +111,7 @@
                       <span class="calculator-form__variant-count-block-unit-name">
                         ширина, см
                       </span>
-                      <input type="number" name="variant-width" class="calculator-form__variant-count-block-value">
+                      <input type="number" name="variant-width" class="calculator-form__variant-count-block-value calculator-form__variant-count-block-value--width">
                     </div>
                     <!--<img src="../img/decor/multiply.png" alt="multiply" class="calculator-form__multiply">-->
                     <div class="calculator-form__variant-count-block-unit">
@@ -117,46 +123,45 @@
                   </div>
                 </fieldset>
               </div>
-              <ul class="calculator-form__variants-list">
-                <li class="calculator-form__variant-parameters">
-                  <h4 class="calculator-form__variant-title">Одностворчатое окно</h4>
-                  <div class="calculator-form__variant-parameter">
-                    <h5 class="calculator-form__variant-parameter-title">
-                      1.Критерий выбора
-                    </h5>
-                    <ul class="calculator-form__variant-parameter-variants">
-                      <li class="calculator-form__variant-parameter-item">
-                        <label for="#variant1.1">пункт выбора 1</label>
-                        <input type="checkbox" name="variant1.1" id="#variant1.1">
-                      </li>
-                      <li class="calculator-form__variant-parameter-item">
-                        <label for="#variant1.2">пункт выбора 2</label>
-                        <input type="checkbox" name="variant1.1" id="#variant1.2">
-                      </li>
-                      <li class="calculator-form__variant-parameter-item">
-                        <label for="#variant1.3">пункт выбора 3</label>
-                        <input type="checkbox" name="variant1.1" id="#variant1.3">
-                      </li>
-                    </ul>
+              <div class="calculator-form__variant-parameters">
+                <h4 class="calculator-form__variant-title">Одностворчатое окно KBE</h4>
+                <div class="calculator-form__variant-parameter">
+                  <h5 class="calculator-form__variant-parameter-title">
+                    1.Критерий выбора
+                  </h5>
+                  <ul class="calculator-form__variant-parameter-variants">
+                    <li class="calculator-form__variant-parameter-item">
+                      <label for="#variant1.1">пункт выбора 1</label>
+                      <input type="checkbox" name="variant1.1" id="#variant1.1">
+                    </li>
+                    <li class="calculator-form__variant-parameter-item">
+                      <label for="#variant1.2">пункт выбора 2</label>
+                      <input type="checkbox" name="variant1.1" id="#variant1.2">
+                    </li>
+                    <li class="calculator-form__variant-parameter-item">
+                      <label for="#variant1.3">пункт выбора 3</label>
+                      <input type="checkbox" name="variant1.1" id="#variant1.3">
+                    </li>
+                  </ul>
+                </div>
+                <div class="calculator-form__variant-parameter">
+                  <h5 class="calculator-form__variant-parameter-title">
+                    2. Выберите открывание створки
+                  </h5>
+                  <div class="calculator-form__variant-parameter-variants">
+                    <select size="3" multiple name="opens" class="calculator-form__variant-parameter-variants--select">
+                      <option selected value="disable-open">Не открывается</option>
+                      <option value="full-open">Открывается</option>
+                      <option value="half-open">Открывается наполовину</option>
+                    </select><
                   </div>
-                  <div class="calculator-form__variant-parameter">
-                    <h5 class="calculator-form__variant-parameter-title">
-                      2. Выберите открывание створки
-                    </h5>
-                    <div class="calculator-form__variant-parameter-variants">
-                      <select size="3" multiple name="opens">
-                        <option selected value="disable-open">Не открывается</option>
-                        <option value="full-open">Открывается</option>
-                        <option value="half-open">Открывается наполовину</option>
-                      </select><
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
             <div class="calculator-form__submit-block">
-              <input type="text" placeholder="Введите номер" class="calculator-form__phone" name="customer-phone">
-              <input type="submit" value="рассчитать">
+              <span class="calculator-form__user-icon"></span>
+              <input type="tel" placeholder="Введите номер" class="calculator-form__phone" name="customer-phone">
+              <input type="submit" value="рассчитать" class="calculator-form__submit">
             </div>
           </div>
         </form>

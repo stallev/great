@@ -3,14 +3,21 @@
   margin: 0 auto;
   box-sizing: border-box;
 }
-@media (min-width: $tablet-width) {
-  .container{
-    width: 768px;
-    &--header{
-      background-size: 174%;
-      background-position: -468px 0px;
-    }
-  }
+.container--header-upper{
+  display: flex;
+  justify-content: space-around;
 }
-@media (min-width: $desctop-width) {
+.container--header--bottom{
+  padding: 50px 0;
+  background-image: url(../img/content/form_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+.container--slider{
+  @extend %fl-col;
+}
+.container--calculator{
+  @extend %fl-col;
+}
+@media (min-width: $tablet-width) {}
+@media (min-width: $desctop-width) {}

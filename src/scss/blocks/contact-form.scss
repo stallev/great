@@ -1,0 +1,43 @@
+.contact-form{
+  width: 360px;
+  margin-left: 200px;
+  padding: 29px 32px 52px;
+  background-color: $fiolet-content-color;
+  &__input-wrapper{
+    @extend %fl-col;
+  }
+  &__message{
+    text-align: center;
+    color: #ffffff;
+    font-family: $content-ff;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    // Text style for "оставь тел"
+    letter-spacing: 0.6px;
+  }
+  &__input-block{
+    @extend %fl-col;
+  }
+  &__input-field{
+    display: block;
+    padding: 4px 10px;
+    color: $grey-color;
+    font-family: $content-ff;
+    font-size: 24px;
+    font-weight: 400;
+    // Text style for "Введите но"
+    letter-spacing: 0.6px;
+  }
+  &__submit-button{
+    display: block;
+    color: $black-content-color;
+    background-color: #ffc087;
+    text-align: center;
+    font-family: $content-ff;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+}

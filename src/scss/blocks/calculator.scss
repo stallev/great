@@ -1,0 +1,26 @@
+.calculator{
+  &__product-list{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__product-item{
+    @extend %fl-col;
+  }
+  &__product-item-image{
+    display: block;
+  }
+  %__product-item-title{
+    text-align: center;
+    color: $black-content-color;
+    font-family: $content-ff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 45px;
+    // Text style for "Двухстворч"
+    letter-spacing: 0.35px;
+    &--active{
+      color: #0099de;
+      text-decoration: underline;
+    }
+  }
+}

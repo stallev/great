@@ -1,0 +1,15 @@
+.part-title{
+  text-align: center;
+  font-family: $content-ff;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  // Text style for "форма с кн"
+  letter-spacing: 0.6px;
+  &--fiolet{
+    color: $fiolet-content-color;
+  }
+  &--black{
+    color: black;
+  }
+}
